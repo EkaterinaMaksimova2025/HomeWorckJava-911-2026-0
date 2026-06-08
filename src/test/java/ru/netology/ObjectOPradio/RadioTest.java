@@ -347,7 +347,20 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
-
+    @Test
+    public void zeroStationPrev() {
+        Radio radio = new Radio();
+        radio.setCurrentStation(0);
+ 
+        radio.prev();
+ 
+        int expected = 9;
+        int actual = radio.getCurrentStation();
+ 
+        Assertions.assertEquals(expected, actual);
+ 
+    }
+	
     @Test
     public void firstMaxStationPrev() {
         Radio radio = new Radio();
